@@ -1,0 +1,3 @@
+#!/bin/sh
+/bin/sh ~/.programs/dwm/bar.sh &
+exec picom & nitrogen --restore & dwm
