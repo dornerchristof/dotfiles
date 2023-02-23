@@ -1,0 +1,22 @@
+#!/bin/sh
+#Symlinked from $XDG_CONFIG_HOME/zsh/zshenv to /etc/zsh/zshenv
+
+#ZSH-config location
+export ZDOTDIR=$HOME/.config/zsh
+#xinitrc location (does not work in debian version of startx, because of bug)
+export XINITRC=$HOME/.config/x11/xinitrc
+#Xauthority location
+export XAUTHORITY=$HOME/.tmp/.Xauthority
+
+#XDG directories
+export XDG_CONFIG_HOME=$HOME/.config
+export XDG_CACHE_HOME=$HOME/.cache
+export XDG_DATA_HOME=$HOME/.data
+
+
+
+
+
+
+
+
