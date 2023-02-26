@@ -1,0 +1,5 @@
+[init]
+  defaultBranch = master
+ [user]
+  email = chrisi@chrisi.com
+  name = chrisi
