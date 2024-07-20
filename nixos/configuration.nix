@@ -70,14 +70,15 @@
      discord
      zoxide # Smart cd
      fzf # Command Line Fuzzy Finder
-	     cliphist # Clipboard history manager
-	     wl-clipboard # Clipboard util
-	     wl-clip-persist # Persistant clipboard
-	     hyprpaper #Wallpaper utility
+     cliphist # Clipboard history manager
+     wl-clipboard # Clipboard util
+     wl-clip-persist # Persistant clipboard
+     hyprpaper #Wallpaper utility
 	     hypridle # Idle deamon
 	     hyprlock # Lock Screen
   ];
 
+	nix.settings.experimental-features = [ "nix-command" "flakes" ];
   programs.hyprland.enable = true;
   programs.zsh.enable = true;
 
