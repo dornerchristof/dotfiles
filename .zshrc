@@ -55,7 +55,9 @@ zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'
 # Aliases
 alias ls='ls --color'
 alias vim='nvim'
-alias update='sudo nixos-rebuild switch --flake ~/dotfiles/nixos'
+alias upnix='sudo nixos-rebuild switch --flake ~/dotfiles/nixos'
+alias uphome='home-manager switch --flake ~/dotfiles/nixos'
+alias upgrade='nix flake update ~/dotfiles/nixos'
 
 # Shell integrations
 eval "$(fzf --zsh)"
