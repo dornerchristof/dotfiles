@@ -38,7 +38,7 @@
   };
 
   # Configure console keymap
-  #console.keyMap = "gb";
+  console.keyMap = "us";
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.chrisi = {
