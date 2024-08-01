@@ -8,6 +8,7 @@
   imports =
     [ # Include the results of the hardware scan.
       ./dellLaptop.nix
+      ./hyprland.nix
     ];
 
   # Bootloader.
