@@ -38,6 +38,10 @@
     LC_TIME = "de_AT.UTF-8";
   };
 
+  fonts.packages = with pkgs; [
+    nerdfonts
+  ];
+
   # Configure console keymap
   console.keyMap = "us";
 
@@ -77,6 +81,10 @@
      hyprpaper #Wallpaper utility
 	     hypridle # Idle deamon
 	     hyprlock # Lock Screen
+     vivaldi
+     brave
+     chromium
+     bind #nslookup, etc..
   ];
 
 	nix.settings.experimental-features = [ "nix-command" "flakes" ];

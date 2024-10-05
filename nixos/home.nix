@@ -14,14 +14,20 @@
   # want to update the value, then make sure to first check the Home Manager
   # release notes.
   home.stateVersion = "24.05"; # Please read the comment before changing.
-
+  nixpkgs.config.allowUnfree = true;
   # The home.packages option allows you to install Nix packages into your
   # environment.
   home.packages = [
+        pkgs.obsidian
+	pkgs.discord
+	pkgs.vscode
+	pkgs.kubectl
+	pkgs.kubernetes-helm
+	pkgs.thttpd
+	pkgs.openssl
   ];
 
-  # Home Manager is pretty good at managing dotfiles. The primary way to manage
-  # plain files is through 'home.file'.
+
   home.file = {
     # # Building this configuration will create a copy of 'dotfiles/screenrc' in
     # # the Nix store. Activating the configuration will then make '~/.screenrc' a
@@ -57,6 +63,7 @@
   #  /etc/profiles/per-user/chrisi/etc/profile.d/hm-session-vars.sh
   #
   home.sessionVariables = {
+  	NIXOS_OZONE_WL=1;
     # EDITOR = "emacs";
   };
 
