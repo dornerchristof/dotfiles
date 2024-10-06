@@ -78,9 +78,7 @@
      cliphist # Clipboard history manager
      wl-clipboard # Clipboard util
      wl-clip-persist # Persistant clipboard
-     hyprpaper #Wallpaper utility
-	     hypridle # Idle deamon
-	     hyprlock # Lock Screen
+
      vivaldi
      brave
      chromium
