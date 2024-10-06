@@ -96,6 +96,10 @@
      pulse.enable = true;
   };
 
+  #Disabeling rpfilter so that all traffic can be routed through a wireguard tunnel.
+  #See https://nixos.wiki/wiki/WireGuard#Client_setup
+  networking.firewall.checkReversePath = false; 
+   
 
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];
