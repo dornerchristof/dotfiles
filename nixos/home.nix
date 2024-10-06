@@ -25,6 +25,7 @@
 	pkgs.kubernetes-helm
 	pkgs.thttpd
 	pkgs.openssl
+  pkgs.networkmanagerapplet
   ];
 
 
@@ -43,6 +44,7 @@
   xdg.configFile = {
 	"hypr".source = ../hypr;
 	"kitty".source = ../kitty;
+  "waybar".source = ../waybar;
   };
 
 
