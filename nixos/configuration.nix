@@ -96,6 +96,15 @@
      pulse.enable = true;
   };
 
+  services = {
+    syncthing = {
+        enable = true;
+        user = "chrisi";
+        dataDir = "/home/chrisi/vaults";    # Default folder for new synced folders
+        configDir = "/home/chrisi/.config/syncthing";   # Folder for Syncthing's settings and keys
+    };
+  };
+
   #Disabeling rpfilter so that all traffic can be routed through a wireguard tunnel.
   #See https://nixos.wiki/wiki/WireGuard#Client_setup
   networking.firewall.checkReversePath = false; 
