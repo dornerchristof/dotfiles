@@ -42,8 +42,13 @@
     nerdfonts
   ];
 
+  services.xserver = {
+    layout = "de";
+    xkbVariant = "neo_qwertz";
+  };
+
   # Configure console keymap
-  console.keyMap = "us";
+  console.keyMap = "neoqwertz";
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.chrisi = {
@@ -88,6 +93,11 @@
 	nix.settings.experimental-features = [ "nix-command" "flakes" ];
   programs.hyprland.enable = true;
   programs.zsh.enable = true;
+
+  #Bluetooth
+  hardware.bluetooth.enable = true; # enables support for Bluetooth
+  hardware.bluetooth.powerOnBoot = true; # powers up the default Bluetooth controller on boot
+  services.blueman.enable = true;
 
   services.pipewire = {
      enable = true;
