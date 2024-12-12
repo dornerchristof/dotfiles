@@ -26,6 +26,10 @@
         pkgs.thttpd
         pkgs.openssl
         pkgs.networkmanagerapplet
+        pkgs.zoom-us
+        pkgs.pavucontrol
+        pkgs.fastfetch
+        pkgs.jetbrains-toolbox
     ];
 
 
