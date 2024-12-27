@@ -85,9 +85,16 @@
      bind #nslookup, etc..
   ];
 
+  programs.thunar.enable = true;
+
 	nix.settings.experimental-features = [ "nix-command" "flakes" ];
   programs.hyprland.enable = true;
   programs.zsh.enable = true;
+  
+  #Automount usb-drives, sd-cards,....
+  services.devmon.enable = true;
+  services.gvfs.enable = true; 
+  services.udisks2.enable = true;
 
   #Bluetooth
   hardware.bluetooth.enable = true; # enables support for Bluetooth
@@ -113,13 +120,6 @@
   #Disabeling rpfilter so that all traffic can be routed through a wireguard tunnel.
   #See https://nixos.wiki/wiki/WireGuard#Client_setup
   networking.firewall.checkReversePath = false; 
-   
-
-  # Open ports in the firewall.
-  # networking.firewall.allowedTCPPorts = [ ... ];
-  # networking.firewall.allowedUDPPorts = [ ... ];
-  # Or disable the firewall altogether.
-  # networking.firewall.enable = false;
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
