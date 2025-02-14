@@ -1,0 +1,5 @@
+\.git
+/nixos
+\.gitignore
+LICENSE
+/wireguard
