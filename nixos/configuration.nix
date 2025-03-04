@@ -1,5 +1,5 @@
 
-{ config, pkgs, ... }:
+{ config, pkgs, inputs, ... }:
 
 {
   imports =
@@ -7,6 +7,7 @@
       ./dellLaptop.nix
       ./hyprland.nix
       ./software.nix
+      ./development.nix
     ];
 
   # Bootloader.
@@ -49,7 +50,7 @@
     description = "chrisi";
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [];
-    shell = pkgs.zsh;
+    shell = pkgs.nushell;
   };
 
   # Allow unfree packages
@@ -57,36 +58,28 @@
 
   # List packages installed in system profile.
   environment.systemPackages = with pkgs; [
-     neovim
-     kitty # Terminal
-     dolphin # File System Explorer
      wofi # Program launcher
-     firefox # Browser
      dunst # Notification Deamon
      xdg-desktop-portal-hyprland # Desktop Portal
-     polkit-kde-agent # Authentication Agent
+     kdePackages.polkit-kde-agent-1 # Authentication Agent
      qt5.qtwayland # QT Support
      qt6.qtwayland # QT Support
-     git # Version Control
      oh-my-posh # Command Prompt
      pwvucontrol # Audio Control
-     discord
      zoxide # Smart cd
      fzf # Command Line Fuzzy Finder
      cliphist # Clipboard history manager
      wl-clipboard # Clipboard util
      wl-clip-persist # Persistant clipboard
-
-     vivaldi
-     brave
-     chromium
      bind #nslookup, etc..
+     nushell
   ];
+  
 
   programs.thunar.enable = true;
 
 	nix.settings.experimental-features = [ "nix-command" "flakes" ];
-  programs.hyprland.enable = true;
+
   programs.zsh.enable = true;
   
   #Automount usb-drives, sd-cards,....

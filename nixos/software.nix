@@ -6,7 +6,6 @@
         vscode
         kubectl
         kubernetes-helm
-       #.thttpd
         openssl
         networkmanagerapplet
         zoom-us
@@ -15,5 +14,8 @@
         jetbrains-toolbox
         eog
         stow
+        wezterm
+        librewolf
+        chromium
     ];
 }

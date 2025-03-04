@@ -1,12 +1,13 @@
-{ config, pkgs, ... }:
+{ config, pkgs, inputs, ... }:
 {
+  	programs.hyprland.enable = true;
+
 	environment.systemPackages = with pkgs; [
 		hyprpaper #Wallpaper utility
 	    hypridle # Idle deamon
 	    hyprlock # Lock Screen
-		waybar
+		inputs.waybar.packages."${pkgs.system}".waybar
 	];
-
 
 	#Keyring
   	services.gnome.gnome-keyring.enable = true;
