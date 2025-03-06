@@ -59,6 +59,7 @@
   # List packages installed in system profile.
   environment.systemPackages = with pkgs; [
      wofi # Program launcher
+     rofi-wayland
      dunst # Notification Deamon
      xdg-desktop-portal-hyprland # Desktop Portal
      kdePackages.polkit-kde-agent-1 # Authentication Agent
