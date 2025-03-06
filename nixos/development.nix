@@ -4,5 +4,7 @@
         jetbrains.clion
         neovim
         git
+        openssl
+        vscode
     ];
 }

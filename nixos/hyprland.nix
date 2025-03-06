@@ -7,6 +7,8 @@
 	    hypridle # Idle deamon
 	    hyprlock # Lock Screen
 		inputs.waybar.packages."${pkgs.system}".waybar
+		nwg-look # Themes for gtk
+		qt6ct
 	];
 
 	#Keyring
@@ -28,5 +30,6 @@
 	#Tells Electron-Apps (Discord, etc.) to use Wayland.
 	environment.sessionVariables = rec {
 		NIXOS_OZONE_WL=1;
+		QT_QPA_PLATFORMTHEME="qt6ct";
 	};
 }
