@@ -2,7 +2,7 @@
 {
     environment.systemPackages = with pkgs; [
         obsidian
-        discord
+        webcord 
         networkmanagerapplet
         zoom-us
         pavucontrol
