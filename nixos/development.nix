@@ -7,5 +7,7 @@
         git
         openssl
         vscode
+        lazygit
+        clang
     ];
 }

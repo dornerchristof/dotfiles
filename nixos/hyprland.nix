@@ -21,8 +21,8 @@
 	services.hypridle.enable = true;
 
 	#Gdm display manager
-	services.xserver.displayManager.gdm.enable = true;
-	services.xserver.displayManager.gdm.wayland = true;
+	services.displayManager.gdm.enable = true;
+	services.displayManager.gdm.wayland = true;
 
 	#Not sure if I need this?
 	services.xserver.enable = true;

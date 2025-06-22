@@ -69,13 +69,19 @@
      pwvucontrol # Audio Control
      zoxide # Smart cd
      fzf # Command Line Fuzzy Finder
+     ripgrep
+     fd
      cliphist # Clipboard history manager
      wl-clipboard # Clipboard util
      wl-clip-persist # Persistant clipboard
      bind #nslookup, etc..
      nushell
   ];
-  
+   programs.nix-ld.enable = true;
+  programs.nix-ld.libraries = with pkgs; [
+    # Add any missing dynamic libraries for unpackaged programs
+    # here, NOT in environment.systemPackages
+  ]; 
 
   programs.thunar.enable = true;
 
