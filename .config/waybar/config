@@ -11,6 +11,7 @@
         "hyprland/workspaces",
         "hyprland/submap"
     ],
+    "start_hidden": true,
     "modules-right": [
         "idle_inhibitor",
         "pulseaudio",
